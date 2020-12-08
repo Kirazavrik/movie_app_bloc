@@ -1,5 +1,5 @@
 
-class Results {
+class TrendingMovie {
 
   final bool video;
   final double vote_average;
@@ -17,7 +17,7 @@ class Results {
   final double popularity;
   final String media_type;
 
-	Results.fromJsonMap(Map<String, dynamic> map): 
+	TrendingMovie.fromJsonMap(Map<String, dynamic> map):
 		video = map["video"],
 		vote_average = map["vote_average"],
 		overview = map["overview"],

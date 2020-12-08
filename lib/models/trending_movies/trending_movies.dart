@@ -1,15 +1,15 @@
-import 'package:simple_movie_app/models/trending_movies/results.dart';
+import 'package:simple_movie_app/models/trending_movies/trending_movie.dart';
 
-class Response {
+class TrendingMovies {
 
   final int page;
-  final List<Results> results;
+  final List<TrendingMovie> results;
   final int total_pages;
   final int total_results;
 
-	Response.fromJsonMap(Map<String, dynamic> map): 
+	TrendingMovies.fromJsonMap(Map<String, dynamic> map):
 		page = map["page"],
-		results = List<Results>.from(map["results"].map((it) => Results.fromJsonMap(it))),
+		results = List<TrendingMovie>.from(map["results"].map((it) => TrendingMovie.fromJsonMap(it))),
 		total_pages = map["total_pages"],
 		total_results = map["total_results"];
 
